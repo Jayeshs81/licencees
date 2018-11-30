@@ -112,6 +112,7 @@ app.get("/:type/:id", function (req, res) {
     res.json(resource);
 });
 
-app.listen(5000, function () {
-    console.log("Data source listening on port 5000.");
+var port = process.env.PORT || 8080;
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
 });
